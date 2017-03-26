@@ -4,10 +4,13 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
+set( APP_SRC
+     src/main/cpp/native-lib.cpp
+     src/main/cpp/tools.c )
 
 add_library( native-lib
              SHARED
-             src/main/cpp/native-lib.cpp )
+             ${APP_SRC} )
 
 find_library( log-lib
               log )
