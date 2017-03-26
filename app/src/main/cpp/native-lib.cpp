@@ -4,10 +4,12 @@
 
 #define JNIREG_CLASS "com/zq/btplayer/MainActivity"
 
+//test method
 JNIEXPORT jstring JNICALL native_hello(JNIEnv *env, jclass clazz)
 {
     return env->NewStringUTF("hello");
 }
+
 
 JNIEXPORT jint JNICALL parse_torrent(JNIEnv *env, jclass clazz, jstring torrentPath)
 {
@@ -17,6 +19,7 @@ JNIEXPORT jint JNICALL parse_torrent(JNIEnv *env, jclass clazz, jstring torrentP
 static JNINativeMethod method_table[] = {
         {"stringFromJNI", "()Ljava/lang/String;", (void*)native_hello}
 };
+
 
 static int registerNativeMethods(JNIEnv* env, const char* className,
                                  JNINativeMethod* gMethods, int numMethods)
