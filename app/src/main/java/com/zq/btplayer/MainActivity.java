@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         parseTorrent(torrentPath);
     }
 
-    //test zgqqq
+    //test zgqqqghh
     public native String stringFromJNI();
     public native int parseTorrent(String path);
 }
