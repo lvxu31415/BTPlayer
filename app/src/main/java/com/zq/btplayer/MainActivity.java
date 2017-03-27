@@ -1,8 +1,7 @@
 package com.zq.btplayer;
 
-import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.zq.common.MyConfig;
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         parseTorrent(torrentPath);
     }
 
+    //test zgqqq
     public native String stringFromJNI();
     public native int parseTorrent(String path);
 }
