@@ -14,16 +14,15 @@ JNIEXPORT jstring JNICALL native_hello(JNIEnv *env, jclass clazz)
 
 JNIEXPORT jint JNICALL parse_torrent(JNIEnv *env, jclass clazz, jstring torrentPath)
 {
+    int result = -1;
     char* file_path = Jstring2str(env, torrentPath);
     LOGE("file path is %s", file_path);
     FILE* fp = fopen(file_path, "rb");
     if (NULL != fp) {
-        LOGE("hhddkh");
-    } else {
-        LOGE("mmExkm");
+        return result;
     }
-//    fseek(fp, 0L, SEEK_END);
-//    LOGE("file leth %d" , ftell(fp));
+    fseek(fp, 0L, SEEK_END);
+    LOGE("file leth %d" , ftell(fp));
     return 0;
 }
 
